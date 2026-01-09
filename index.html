@@ -28,7 +28,7 @@
 
       --wa-size:55px;
       --wa-gap:18px;
-      --wa-lift:92px; /* cuánto sube el botón cuando aparece el footer */
+      --wa-lift:92px;
     }
 
     *{box-sizing:border-box;margin:0;padding:0}
@@ -37,12 +37,11 @@
       background:var(--bg);
       color:var(--dark);
       line-height:1.6;
-      padding-bottom:calc(var(--wa-size) + var(--wa-gap) + 10px); /* aire para no tapar contenido abajo */
+      padding-bottom:calc(var(--wa-size) + var(--wa-gap) + 10px);
     }
     a{text-decoration:none;color:inherit}
     img{max-width:100%;display:block}
 
-    /* HERO */
     header{
       background:
         linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
@@ -51,566 +50,245 @@
       padding:96px 20px 84px;
       text-align:center;
       position:relative;
-      overflow:hidden;
-    }
-    .topbar{
-      position:absolute;
-      top:18px;
-      left:0;
-      right:0;
-      display:flex;
-      justify-content:center;
-      pointer-events:none;
-      opacity:.98;
-      padding:0 16px;
-    }
-    .brand-pill{
-      pointer-events:auto;
-      background:rgba(255,255,255,.14);
-      backdrop-filter: blur(10px);
-      border:1px solid rgba(255,255,255,.18);
-      border-radius:999px;
-      padding:10px 16px;
-      display:flex;
-      gap:10px;
-      align-items:center;
-      font-weight:600;
-      letter-spacing:.2px;
-    }
-    .brand-dot{
-      width:10px;height:10px;border-radius:50%;
-      background:var(--primary);
-      box-shadow:0 0 0 6px rgba(230,183,169,.22);
     }
 
     header h1{
-      font-size:2.25rem;
-      font-weight:600;
-      margin:0 auto 14px;
-      max-width:920px;
-      text-shadow:0 10px 30px rgba(0,0,0,.30);
+      font-size:2.2rem;
+      margin-bottom:14px;
+      text-shadow:0 10px 30px rgba(0,0,0,.3);
     }
     header p{
-      font-size:1.06rem;
       max-width:680px;
       margin:0 auto 26px;
-      opacity:.98;
+      font-size:1.05rem;
     }
-    .hero-cta{
-      display:flex;
-      gap:12px;
-      justify-content:center;
-      flex-wrap:wrap;
-      margin-top:10px;
-    }
+
     .btn{
       display:inline-flex;
-      align-items:center;
       justify-content:center;
-      gap:10px;
+      align-items:center;
       background:var(--primary);
       color:#fff;
       padding:14px 28px;
       border-radius:40px;
       font-weight:600;
-      transition:.25s ease;
-      box-shadow:0 12px 28px rgba(0,0,0,.22);
+      transition:.25s;
     }
-    .btn:hover{transform:translateY(-1px); opacity:.92}
-    .btn.secondary{
-      background:rgba(255,255,255,.16);
-      border:1px solid rgba(255,255,255,.22);
-      box-shadow:none;
-    }
-    .btn.secondary:hover{opacity:.96}
+    .btn:hover{opacity:.9}
 
-    .hero-badges{
-      margin:26px auto 0;
-      display:flex;
-      justify-content:center;
-      gap:10px;
-      flex-wrap:wrap;
-      max-width:920px;
-    }
-    .badge{
-      background:rgba(255,255,255,.14);
-      border:1px solid rgba(255,255,255,.16);
-      padding:10px 12px;
-      border-radius:999px;
-      font-size:.92rem;
-      backdrop-filter: blur(10px);
-    }
-
-    /* SECTIONS */
     section{
-      padding:72px 20px;
+      padding:70px 20px;
       max-width:1100px;
       margin:auto;
     }
     .center{text-align:center}
-    .kicker{
-      display:inline-block;
-      background:rgba(196,140,124,.10);
-      color:var(--accent);
-      border:1px solid rgba(196,140,124,.18);
-      padding:8px 12px;
-      border-radius:999px;
-      font-weight:600;
-      font-size:.9rem;
-      margin-bottom:14px;
-    }
-    h2{
-      font-size:1.85rem;
-      line-height:1.25;
-      margin-bottom:10px;
-    }
-    .sub{
-      max-width:760px;
-      margin:0 auto;
-      opacity:.92;
-    }
 
-    /* Confianza (imagen + texto) */
     .confianza{
       display:grid;
-      grid-template-columns:1.05fr .95fr;
+      grid-template-columns:1.1fr .9fr;
       gap:40px;
       align-items:center;
-      margin-top:42px;
+      margin-top:40px;
     }
     .confianza-img img{
-      width:100%;
       border-radius:22px;
-      box-shadow:0 16px 40px rgba(0,0,0,.14);
+      box-shadow:0 16px 40px rgba(0,0,0,.15);
     }
-    .confianza-texto h3{
-      font-size:1.55rem;
-      margin-bottom:12px;
-      color:var(--dark);
-    }
-    .confianza-texto p{opacity:.95}
+
     .mini-list{
-      margin-top:18px;
+      margin-top:20px;
       display:grid;
-      gap:10px;
+      gap:12px;
     }
     .mini-item{
-      background:var(--light);
-      border:1px solid rgba(0,0,0,.06);
+      background:#fff;
+      padding:14px;
       border-radius:14px;
-      padding:12px 14px;
       box-shadow:0 10px 24px rgba(0,0,0,.05);
       display:flex;
-      gap:10px;
+      gap:12px;
       align-items:flex-start;
     }
     .mini-icon{
-      width:34px;height:34px;border-radius:10px;
+      width:32px;
+      height:32px;
+      border-radius:10px;
       background:var(--secondary);
-      display:flex;align-items:center;justify-content:center;
       color:#8a5a4a;
+      display:flex;
+      align-items:center;
+      justify-content:center;
       font-weight:700;
-      flex:0 0 auto;
     }
-    .mini-item b{display:block;margin-bottom:2px;color:var(--accent)}
-    .mini-item span{opacity:.9;font-size:.95rem}
 
-    /* Cards beneficios */
     .cards{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
       gap:22px;
-      margin-top:36px;
+      margin-top:40px;
     }
     .card{
-      background:var(--light);
+      background:#fff;
       padding:26px;
       border-radius:20px;
       box-shadow:0 12px 32px rgba(0,0,0,.07);
-      border:1px solid rgba(0,0,0,.05);
     }
-    .card h4{
-      margin-bottom:10px;
-      color:var(--accent);
-      font-size:1.08rem;
-    }
-    .card p{opacity:.92}
+    .card h4{color:var(--accent);margin-bottom:10px}
 
-    /* Steps */
-    .steps{
+    .placeholders{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
       gap:18px;
       margin-top:34px;
     }
-    .step{
-      background:#fff;
-      border:1px solid rgba(0,0,0,.05);
-      padding:22px;
+    .placeholder{
+      background:linear-gradient(135deg,#f3d9cf,#fff);
+      border:2px dashed rgba(196,140,124,.4);
       border-radius:18px;
-      text-align:left;
-      box-shadow:0 10px 26px rgba(0,0,0,.05);
-    }
-    .step .num{
-      display:inline-flex;
+      height:220px;
+      display:flex;
       align-items:center;
       justify-content:center;
-      width:42px;height:42px;
-      border-radius:14px;
-      background:var(--secondary);
-      color:#8a5a4a;
-      font-weight:700;
-      margin-bottom:12px;
-    }
-    .step b{display:block;margin-bottom:6px;color:var(--accent)}
-    .step p{opacity:.92;font-size:.96rem}
-
-    /* Gallery */
-    .gallery{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-      gap:16px;
-      margin-top:34px;
-    }
-    .gallery figure{
-      background:#fff;
-      border:1px solid rgba(0,0,0,.05);
-      border-radius:18px;
-      overflow:hidden;
-      box-shadow:0 12px 30px rgba(0,0,0,.06);
-    }
-    .gallery img{
-      width:100%;
-      height:300px;
-      object-fit:cover;
-    }
-    .gallery figcaption{
-      padding:12px 14px;
-      font-size:.92rem;
-      opacity:.86;
-    }
-
-    /* FAQ */
-    .faq{
-      max-width:820px;
-      margin:34px auto 0;
-      display:grid;
-      gap:14px;
-    }
-    details{
-      background:#fff;
-      border:1px solid rgba(0,0,0,.06);
-      border-radius:16px;
-      padding:14px 16px;
-      box-shadow:0 10px 26px rgba(0,0,0,.05);
-    }
-    summary{
-      cursor:pointer;
-      font-weight:600;
-      color:var(--accent);
-      list-style:none;
-    }
-    summary::-webkit-details-marker{display:none}
-    details p{
-      margin-top:10px;
-      opacity:.92;
-      font-size:.96rem;
-    }
-
-    /* CTA band */
-    .cta-band{
-      background:linear-gradient(135deg, rgba(230,183,169,.40), rgba(243,217,207,.55));
-      border:1px solid rgba(196,140,124,.18);
-      border-radius:26px;
-      padding:34px 20px;
       text-align:center;
-      box-shadow:0 16px 40px rgba(0,0,0,.06);
-      margin-top:8px;
+      padding:20px;
+      color:#8a5a4a;
+      font-size:.95rem;
     }
-    .cta-band h2{margin-bottom:10px}
-    .cta-band p{max-width:720px;margin:0 auto 18px;opacity:.92}
 
-    /* Footer */
     footer{
       background:#1f1f1f;
       color:#ddd;
       text-align:center;
       padding:30px 15px;
-      font-size:.92rem;
+      font-size:.9rem;
     }
-    footer a{color:#fff; text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:3px}
 
-    /* WhatsApp flotante */
     .wa-float{
       position:fixed;
       right:var(--wa-gap);
       bottom:calc(var(--wa-gap) + env(safe-area-inset-bottom, 0px));
       width:var(--wa-size);
       height:var(--wa-size);
+      background:#25d366;
       border-radius:50%;
       display:flex;
       align-items:center;
       justify-content:center;
       box-shadow:0 10px 20px rgba(0,0,0,.25);
       z-index:999;
-      background:#25d366;
-      transition: bottom .25s ease;
+      transition:bottom .25s;
     }
     .wa-float img{width:28px}
-
     .wa-float.lift{
       bottom:calc(var(--wa-gap) + var(--wa-lift) + env(safe-area-inset-bottom, 0px));
     }
 
     @media(max-width:820px){
-      .confianza{grid-template-columns:1fr; text-align:center}
-      .confianza-texto{order:2}
-      .confianza-img{order:1}
-      .mini-item{ text-align:left }
-      header{padding:88px 18px 74px}
-      header h1{font-size:1.95rem}
+      .confianza{grid-template-columns:1fr}
+      header h1{font-size:1.9rem}
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <div class="topbar">
-      <div class="brand-pill">
-        <span class="brand-dot"></span>
-        BG Alisado Láser
-      </div>
+
+<header>
+  <h1>Tu primer alisado, sin miedo</h1>
+  <p>Alisado láser <b>sin formol</b>. Lacio natural, brillo real y cuidado total del cabello.</p>
+  <a class="btn" href="https://wa.me/5491111111111" target="_blank">Quiero mi diagnóstico</a>
+</header>
+
+<section class="center">
+  <h2>Si es tu primera vez, quedate tranquila 💕</h2>
+  <p>Te explicamos todo antes de empezar y cuidamos tu pelo en cada paso.</p>
+
+  <div class="confianza">
+    <div class="confianza-img">
+      <img src="https://iili.io/fknJB6P.md.jpg" alt="Alisado sin formol">
     </div>
-
-    <h1>Tu primer alisado, sin miedo</h1>
-    <p>Alisado láser <b>sin formol</b>. Lacio natural, brillo real y una experiencia cuidada de principio a fin.</p>
-
-    <div class="hero-cta">
-      <a class="btn" href="https://wa.me/5491111111111?text=Hola%20quiero%20saber%20si%20mi%20pelo%20es%20apto%20para%20alisado%20láser%20sin%20formol.%20¿Te%20puedo%20mandar%20una%20foto%3F" target="_blank" rel="noopener">
-        Quiero mi diagnóstico
-      </a>
-      <a class="btn secondary" href="#resultados">
-        Ver resultados
-      </a>
-    </div>
-
-    <div class="hero-badges">
-      <div class="badge">Sin formol</div>
-      <div class="badge">Movimiento natural</div>
-      <div class="badge">Brillo real</div>
-      <div class="badge">Ideal primera vez</div>
-    </div>
-  </header>
-
-  <section>
-    <div class="center">
-      <div class="kicker">Primera vez</div>
-      <h2>Si es tu primera vez, quedate tranquila</h2>
-      <p class="sub">Te guiamos paso a paso. Si tu pelo no es apto para este tratamiento, te lo decimos con honestidad.</p>
-    </div>
-
-    <div class="confianza">
-      <div class="confianza-img">
-        <img src="https://iili.io/fknJB6P.md.jpg" alt="Alisado sin formol" />
-      </div>
-
-      <div class="confianza-texto">
-        <h3>Lo importante: cuidar tu pelo</h3>
-        <p>
-          La idea no es “planchar” el cabello: es lograr un lacio prolijo, con brillo y movimiento,
-          sin químicos agresivos y con una rutina simple de cuidado.
-        </p>
-
-        <div class="mini-list">
-          <div class="mini-item">
-            <div class="mini-icon">1</div>
-            <div>
-              <b>Diagnóstico por WhatsApp</b>
-              <span>Te pedimos una foto y te orientamos en 2 minutos.</span>
-            </div>
-          </div>
-          <div class="mini-item">
-            <div class="mini-icon">2</div>
-            <div>
-              <b>Te explicamos todo antes</b>
-              <span>Sin sorpresa ni letra chica: te decimos qué esperar.</span>
-            </div>
-          </div>
-          <div class="mini-item">
-            <div class="mini-icon">3</div>
-            <div>
-              <b>Resultado natural</b>
-              <span>Brillo real y frizz controlado, sin rigidez.</span>
-            </div>
-          </div>
+    <div>
+      <div class="mini-list">
+        <div class="mini-item">
+          <div class="mini-icon">1</div>
+          <div>Diagnóstico por WhatsApp</div>
+        </div>
+        <div class="mini-item">
+          <div class="mini-icon">2</div>
+          <div>Te explicamos todo antes</div>
+        </div>
+        <div class="mini-item">
+          <div class="mini-icon">3</div>
+          <div>Resultado natural y brillante</div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="cards" style="margin-top:34px">
-      <div class="card">
-        <h4>Sin formol</h4>
-        <p>Tratamiento pensado para evitar vapores fuertes y químicos agresivos.</p>
-      </div>
-      <div class="card">
-        <h4>Movimiento natural</h4>
-        <p>Te queda prolijo, suave y con caída, sin efecto “planchado duro”.</p>
-      </div>
-      <div class="card">
-        <h4>Cuidado real</h4>
-        <p>Enfoque en mejorar el look y la sensación del cabello, no solo “alisar”.</p>
-      </div>
-      <div class="card">
-        <h4>Asesoramiento honesto</h4>
-        <p>Si tu pelo necesita otra cosa, te lo decimos para que no gastes de más.</p>
-      </div>
+  <div class="cards">
+    <div class="card">
+      <h4>Sin formol</h4>
+      <p>Tratamiento pensado para cuidar la fibra capilar.</p>
     </div>
-  </section>
-
-  <section>
-    <div class="center">
-      <div class="kicker">Cómo es</div>
-      <h2>Así es el turno (simple y claro)</h2>
-      <p class="sub">Para que sepas exactamente qué pasa y te quedes tranquila desde el minuto uno.</p>
+    <div class="card">
+      <h4>Movimiento natural</h4>
+      <p>No queda rígido ni planchado.</p>
     </div>
-
-    <div class="steps">
-      <div class="step">
-        <div class="num">1</div>
-        <b>Nos escribís</b>
-        <p>Mandás una foto con luz natural y te decimos si tu pelo es apto.</p>
-      </div>
-      <div class="step">
-        <div class="num">2</div>
-        <b>Evaluación + preparación</b>
-        <p>Vemos tu caso, te explicamos el proceso y los cuidados básicos.</p>
-      </div>
-      <div class="step">
-        <div class="num">3</div>
-        <b>Resultado</b>
-        <p>Lacio prolijo, brillo real y frizz controlado, con movimiento natural.</p>
-      </div>
+    <div class="card">
+      <h4>Cuidado real</h4>
+      <p>Brillo y suavidad visibles.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="resultados">
-    <div class="center">
-      <div class="kicker">Resultados</div>
-      <h2>Galería (demo)</h2>
-      <p class="sub">Imágenes de referencia para la demo. Luego se reemplazan por resultados reales del perfil.</p>
-    </div>
+<section class="center">
+  <h2>Resultados</h2>
+  <p>Acá van los resultados reales del trabajo (demo sin imágenes).</p>
 
-    <div class="gallery">
-      <figure>
-        <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=1200&q=80" alt="Cabello lacio y brillante" />
-        <figcaption>Brillo natural y caída prolija</figcaption>
-      </figure>
-      <figure>
-        <img src="https://images.unsplash.com/photo-1559599101-f09722fb4948?auto=format&fit=crop&w=1200&q=80" alt="Resultado lacio" />
-        <figcaption>Frizz controlado sin rigidez</figcaption>
-      </figure>
-      <figure>
-        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=80" alt="Cabello con brillo" />
-        <figcaption>Suavidad y look “salón”</figcaption>
-      </figure>
-      <figure>
-        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=80" alt="Pelo largo" />
-        <figcaption>Movimiento natural</figcaption>
-      </figure>
-      <figure>
-        <img src="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?auto=format&fit=crop&w=1200&q=80" alt="Pelo brillante" />
-        <figcaption>Brillo y textura pareja</figcaption>
-      </figure>
-      <figure>
-        <img src="https://images.unsplash.com/photo-1522336284037-91f7da073525?auto=format&fit=crop&w=1200&q=80" alt="Estilo y peinado" />
-        <figcaption>Terminación prolija</figcaption>
-      </figure>
-      <figure>
-        <img src="https://images.unsplash.com/photo-1522336572468-97b06e8ef143?auto=format&fit=crop&w=1200&q=80" alt="Pelo sano" />
-        <figcaption>Look saludable</figcaption>
-      </figure>
-      <figure>
-        <img src="https://images.unsplash.com/photo-1522336209406-4f2c9f2352f1?auto=format&fit=crop&w=1200&q=80" alt="Cabello lacio" />
-        <figcaption>Caída suave</figcaption>
-      </figure>
-      <figure>
-        <img src="https://images.unsplash.com/photo-1522336405970-3f1e63fd88b9?auto=format&fit=crop&w=1200&q=80" alt="Brillo y lacio" />
-        <figcaption>Resultado “beauty”</figcaption>
-      </figure>
-    </div>
-  </section>
+  <div class="placeholders">
+    <div class="placeholder">Foto resultado 1<br>(antes / después)</div>
+    <div class="placeholder">Foto resultado 2<br>(brillo y caída)</div>
+    <div class="placeholder">Foto resultado 3<br>(lacio natural)</div>
+    <div class="placeholder">Foto proceso<br>(secado / plancha)</div>
+    <div class="placeholder">Foto salón / espejo</div>
+    <div class="placeholder">Testimonio / captura</div>
+  </div>
+</section>
 
-  <section>
-    <div class="center">
-      <div class="kicker">FAQ</div>
-      <h2>Preguntas que siempre aparecen</h2>
-      <p class="sub">Respuestas cortas, sin vueltas, para que tengas seguridad antes de reservar.</p>
-    </div>
+<section class="center">
+  <h2>¿Lo vemos juntas?</h2>
+  <p>Mandanos una foto de tu pelo y te decimos si este tratamiento es para vos.</p>
+  <br>
+  <a class="btn" href="https://wa.me/5491111111111" target="_blank">Hablar por WhatsApp</a>
+</section>
 
-    <div class="faq">
-      <details>
-        <summary>¿Es realmente sin formol?</summary>
-        <p>Sí. El enfoque es evitar químicos agresivos y priorizar el cuidado del cabello.</p>
-      </details>
+<footer>
+  © BG Alisado Láser · Demo<br>
+  Creado y diseñado por <a href="https://ciborg347.onrender.com" target="_blank">Ciborg 347</a>
+</footer>
 
-      <details>
-        <summary>¿Me va a quedar planchado sin movimiento?</summary>
-        <p>No. Buscamos un lacio natural: prolijo, con caída y sin rigidez.</p>
-      </details>
+<a class="wa-float" href="https://wa.me/5491111111111" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
 
-      <details>
-        <summary>¿Sirve si tengo el pelo teñido o tratado?</summary>
-        <p>En muchos casos sí. Por eso hacemos diagnóstico por WhatsApp con una foto.</p>
-      </details>
+<script>
+  (function(){
+    const wa = document.querySelector('.wa-float');
+    const footer = document.querySelector('footer');
+    if(!wa || !footer) return;
 
-      <details>
-        <summary>¿Duele o arde?</summary>
-        <p>No debería. Si algo no va con tu tipo de cabello, te lo decimos antes de avanzar.</p>
-      </details>
+    const obs = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          wa.classList.add('lift');
+        }else{
+          wa.classList.remove('lift');
+        }
+      });
+    }, { threshold: 0.1 });
 
-      <details>
-        <summary>¿Qué tengo que hacer después?</summary>
-        <p>Cuidados normales: shampoo suave y mantener el pelo hidratado. Nada raro.</p>
-      </details>
-    </div>
+    obs.observe(footer);
+  })();
+</script>
 
-    <div class="cta-band">
-      <h2>¿Lo vemos juntas?</h2>
-      <p>Escribinos por WhatsApp, mandanos una foto con buena luz y te decimos si tu pelo es apto. Sin compromiso.</p>
-      <a class="btn" href="https://wa.me/5491111111111?text=Hola%20quiero%20saber%20si%20mi%20pelo%20es%20apto%20para%20alisado%20láser%20sin%20formol.%20¿Te%20puedo%20mandar%20una%20foto%3F" target="_blank" rel="noopener">
-        Hablar por WhatsApp
-      </a>
-    </div>
-  </section>
-
-  <footer>
-    © BG Alisado Láser · Demo<br>
-    Creado y diseñado por <a href="https://ciborg347.onrender.com" target="_blank" rel="noopener">Ciborg 347</a>
-  </footer>
-
-  <!-- WhatsApp flotante -->
-  <a class="wa-float" href="https://wa.me/5491111111111?text=Hola%20quiero%20saber%20si%20mi%20pelo%20es%20apto%20para%20alisado%20láser%20sin%20formol.%20¿Te%20puedo%20mandar%20una%20foto%3F" target="_blank" rel="noopener" aria-label="WhatsApp">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-  </a>
-
-  <script>
-    (function(){
-      const wa = document.querySelector('.wa-float');
-      const footer = document.querySelector('footer');
-      if(!wa || !footer) return;
-
-      const obs = new IntersectionObserver((entries)=>{
-        entries.forEach(entry=>{
-          if(entry.isIntersecting){
-            wa.classList.add('lift');
-          }else{
-            wa.classList.remove('lift');
-          }
-        });
-      }, { threshold: 0.1 });
-
-      obs.observe(footer);
-    })();
-  </script>
 </body>
 </html>
